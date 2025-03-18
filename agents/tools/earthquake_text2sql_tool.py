@@ -19,10 +19,10 @@ SQLITE_DB_PATH = os.getenv("SQLITE_DB_PATH")
 
 def convert_text_to_sql(query: str) -> str:
     """
-    Convert a natural language query about earthquakes into a SQL query.
+    Convert a natural language query about conversations into a SQL query.
     
     Args:
-        query (str): The natural language query about earthquake data
+        query (str): The natural language query about conversation data
         
     Returns:
         str: The generated SQL query
@@ -63,7 +63,7 @@ def convert_text_to_sql(query: str) -> str:
 
 def execute_earthquake_sql(sql_query: str) -> str:
     """
-    Execute a SQL query against the earthquake SQLite database and return the results.
+    Execute a SQL query against the conversation SQLite database and return the results.
     
     Args:
         sql_query (str): The SQL query to execute
@@ -119,12 +119,12 @@ def execute_earthquake_sql(sql_query: str) -> str:
 @tool
 def query_earthquake_database(natural_language_query: str) -> str:
     """
-    Convert a natural language query about earthquakes to SQL and execute it.
+    Convert a natural language query about conversations to SQL and execute it.
     
     This tool combines text-to-SQL conversion and SQL execution in one step.
     
     Args:
-        natural_language_query (str): The natural language query about earthquake data
+        natural_language_query (str): The natural language query about conversation data
         
     Returns:
         str: The query results formatted as a string

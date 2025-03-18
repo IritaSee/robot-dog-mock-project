@@ -1,3 +1,7 @@
 .env
 command/__pycache__
 prompts/__pycache__
+agents/__pycache__/utils.cpython-312.pyc
+*/__pycache__/*
+*/*/__pycache__/*
+*/__pycache__/

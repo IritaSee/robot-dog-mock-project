@@ -20,13 +20,13 @@ load_dotenv()
 @tool
 def retrieve_earthquake_knowledge(query: str) -> str:
     """
-    Retrieve common information about earthquakes based on the query.
+    Retrieve common information based on the query.
     
     Args:
-        query (str): The user's question about earthquakes
+        query (str): The user's question about the product
         
     Returns:
-        str: The response with information about earthquakes based on the retrieved context
+        str: The response with information about the product based on the retrieved context
     """
     # Vector store configuration
     collection_name = os.getenv("QDRANT_COLLECTION_NAME")
@@ -55,11 +55,11 @@ def retrieve_earthquake_knowledge(query: str) -> str:
                 context += f"{idx+1}. Type: {oe['type']}\nContent: {oe['text']}\n\n"
     except Exception as e:
         logger.error(f"Error during retrieval: {e}")
-        return "I encountered an error while searching for earthquake information. Please try again later."
+        return "I encountered an error while searching for the related information. Please try again later."
     
     # If no context was retrieved
     if not context.strip():
-        return "I couldn't find any relevant information about earthquakes for your query."
+        return "I couldn't find any relevant information about related for your query."
     
     # Initialize LLM
     try:
@@ -91,4 +91,4 @@ Query:
         return response.content
     except Exception as e:
         logger.error(f"Error during LLM invocation: {e}")
-        return "I encountered an error while processing your earthquake query. Please try again later."
+        return "I encountered an error while processing your related query. Please try again later."

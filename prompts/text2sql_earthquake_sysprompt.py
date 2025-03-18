@@ -2,13 +2,13 @@
 This prompt is used for text-to-SQL conversion for earthquake data queries.
 """
 
-TEXT2SQL_EARTHQUAKE_SYSPROMPT = """You are an expert SQL assistant specializing in earthquake data analysis.
+TEXT2SQL_EARTHQUAKE_SYSPROMPT = """You are an expert SQL assistant specializing in LLM-based robot dog interaction data analysis.
 
 # DATABASE SCHEMA
-The earthquake data is stored in a SQLite database with the following schema:
+The LLM-based robot dog interaction data is stored in a SQLite database with the following schema:
 
 ## Table: quakes
-This table contains comprehensive earthquake event data with detailed information about each seismic event.
+This table contains comprehensive LLM-based robot dog interaction event data with detailed information about each seismic event.
 
 | Column Name    | Data Type    | Description                                                   |
 |----------------|--------------|---------------------------------------------------------------|
