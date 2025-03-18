@@ -37,6 +37,12 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+### 4. (Optional) poppler install
+some might experience `pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?`, fix by installing poppler, in MacOS:
+```bash
+brew install poppler
+```
+
 ## Environment Variables
 
 Create a `.env` file in the root directory with the following variables:
@@ -57,7 +63,7 @@ The project uses Qdrant as a vector database, which is configured in the `docker
 Start the Qdrant service:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 This will start a Qdrant instance accessible at:
