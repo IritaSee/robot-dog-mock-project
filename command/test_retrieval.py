@@ -48,6 +48,7 @@ if __name__ == "__main__":
                     context += f"{idx+1}. Type: {oe['type']}\nContent: {oe['text']}\n\n"
         logger.debug(f"Context:\n{context}")
         logger.debug("-------- END RETRIEVED CONTEXT --------")
+        logger.debug(f"Current model name: {os.getenv("GROQ_LLM_NAME")}")
 
         llm = ChatGroq(
             model=os.getenv("GROQ_LLM_NAME"),

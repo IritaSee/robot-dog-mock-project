@@ -56,6 +56,8 @@ SQLITE_DB_PATH=data/robot_dog_interaction.sqlite  # Path to your earthquake SQLi
 QDRANT_COLLECTION_NAME=robot_dog_collection  # Qdrant collection name
 ```
 
+If there is any changes to the `.env` file, reload the terminal to load the new value.
+
 ## Docker Setup
 
 The project uses Qdrant as a vector database, which is configured in the `docker-compose.yaml` file.
