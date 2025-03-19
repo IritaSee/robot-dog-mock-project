@@ -216,13 +216,13 @@ def main():
     parser.add_argument(
         "--data_dir", 
         type=str, 
-        default="/Users/donny.adhitama/workspace/p6/tt_vidavox/data",
+        default="./data",
         help="Directory containing PDF files"
     )
     parser.add_argument(
         "--output_dir", 
         type=str, 
-        default="/Users/donny.adhitama/workspace/p6/tt_vidavox/data/finetune",
+        default="./data/finetune",
         help="Directory to save the dataset"
     )
     parser.add_argument(
