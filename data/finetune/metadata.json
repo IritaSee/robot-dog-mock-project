@@ -1,0 +1,13 @@
+{
+  "total_examples": 745,
+  "train_examples": 596,
+  "val_examples": 149,
+  "source_pdfs": [
+    "Iga_Narendra_synthetic_data.pdf"
+  ],
+  "chunking_strategy": "by_title",
+  "llm_model": "llama-3.3-70b-versatile",
+  "temperature": 0.7,
+  "train_ratio": 0.8,
+  "format": "jsonl"
+}
